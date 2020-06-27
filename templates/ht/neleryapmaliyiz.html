@@ -1,0 +1,200 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neler Yapmalıyız</title>
+    <link rel="stylesheet" href="{% static "css/neleryap.css"%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <header>
+            <nav class="navbar navbar-expand-lg navbar-inverse">
+                <a class="navbar-brand" href="http://127.0.0.1:8000/" style="background-color: #F7F9FE;">
+                    <img src="{% static "/img/output-onlinepngtools.png "%}" alt="Logo"
+                        style="width: 200px ; height: 10rem; background-color: #F7F9FE;padding-top:20px" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fas fa-bars" style="background-color:#F7F9FE ; z-index: 1; color:blue"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'haberler' %}">
+                                <i class="far fa-newspaper"></i> Haberler
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'veriler' %}">
+                                <i class="fab fa-creative-commons-sampling-plus"></i> Canlı veriler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'neleryapmaliyiz' %}">
+                                <i class="fas fa-user-md"></i> Neler Yapmalıyız</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'sss' %}">
+                            <i class="fas fa-question"></i> S.S.S</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'hakkinda' %}">
+                                <i class="fas fa-hospital-symbol"></i> Covid-19 Hakkında</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    <div style="background-image: url({% static "img/shape-a.png)"%})" >
+        <div class="row m-4">
+            <div class="col-md-3 col-2"></div>
+            <div class="col-md-6 col-8">
+                <div class="text-center" id="baslık" >
+                    <h1 id="baslik1" style="font-family: 'Acme', sans-serif;color:#0e3087">Semptomlar</h1>
+                    <h4 style="font-family: 'Amatic SC', cursive; color:#1d3572">Öncelikle semptomları kontrol ederek başlamalıyız ve bulgularda bir belirtiye ulaşırsak hızlı bir biçimde en yakın sağlık kuruluşuna başvurmalıyız</h4>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-2"></div>  
+        </div>
+        <div class="row" style="margin-bottom: 30px;">
+             <div class="col-md-1"></div>
+             <div class="col-md-10 col-12"><div class="row"> 
+                <div class="col-sm-10 col-md-8 col-lg-4" style="margin-top:80px">
+                    <div class="box2" style="width: 350px;height:230px">
+                        <div class="box2-gfx"> <img src="{%  static "img/mes.png" %}" alt=""></div>
+                        <div class="box2-content">
+                            <h5 class="title" style="color:#0894d1">Nefes Darlığı</h5>
+                            <p><strong>Zor Nefes Alma</strong>Corona virüsün neden olduğu diğer önemli belirtilerden bir tanesi de nefes darlığı şikayetidir. Nefes darlığı herkeste görülmeyebilir bu durum genelde solunum sıkıntısı yaratmaktadır ve durum ilerlerse tıbbi gözlem altına alınması gerekmektedir </p>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <div class="col-sm-10 col-md-8 col-lg-4" style="margin-top:80px">
+                    <div class="box2" style="width: 350px;height:230px">
+                        <div class="box2-gfx"> <img src="{% static "img/ates.png" %}" alt=""></div>
+                        <div class="box2-content">
+                            <h5 class="title" style="color:#0894d1">Ateş</h5>
+                            <p><strong>Düşmeyen Ateş</strong> Corona virüsün neden olduğu en önemli belirtilerden bir tanesi de yüksek ateştir. Bu belirti kişide en önemli belirtiler arasındadır. Corona virüs vücuda çeşitli tahribatlar verdiği için vücutta ateşle bu duruma tepki vermektedir..</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-sm-10 col-md-8 col-lg-4" style="margin-top:80px">
+                    <div class="box2" style="width: 350px;height:230px">
+                        <div class="box2-gfx"> <img src="{% static "img/oksu.png" %}" alt=""></div>
+                        <div class="box2-content">
+                            <h5 class="title" style="color:#0894d1">Öksürük</h5>
+                            <p><strong>Kuru öksürük</strong>  Corona virüs kişilerde direk alt ve üst solunum yolunu etkilediğinden dolayı ilk görülen ve şikayete neden olan durum kuru öksürüktür. Kuru öksürük bu tarz durumda sık sık olmaktadır</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div></div>
+             <div class="col-md-1"></div>
+    </div>
+    </div>
+    <section style="background-color: #F2F2FE;padding-top:20px; padding-bottom:50px;">
+        <div class="row" >
+        <div class="col-md-3 col-2"><img src="{%  static "img/def.png" %}" width="100%"  style="margin-top: 200px;"></div>
+        <div class="col-md-6 col-8">
+            <div class="text-center" id="korunma" >
+                <h1 id="baslik2" style="font-family: 'Acme', sans-serif;color:#0e3087">Korunma & Tavsiye</h1>
+                <h4 style="font-family: 'Amatic SC', cursive; color:#1d3572">Şu anda koronavirüs hastalığı 2019'u (COVİD-19) önlemek için bir aşı bulunmamaktadır. Hastalığı önlemenin en iyi yolu, bu virüse maruz kalmaktan kaçınmaktır. DSÖ web sitesinde ve ulusal ve yerel halk sağlığı Kurumu aracılığıyla mevcut olan COVİD-19 salgını hakkındaki en son bilgilerin farkında olun.</h4>
+            </div>
+            <div class="row" style="margin-top:40px">
+                <div class="col-md-4 col-12">
+                    <div class="card" style="width:100%;margin-bottom: 20px;border:none;">
+                    <div style="background-color: #F2F2FE;padding:20px;">
+                        <img class="card-img-top img-circle" src="{% static "img/liquid-soap1).png" %}" alt="Card image" style="width:100% ;display:block; border-radius: 50%;background-color: #F2F2FE;border:none;">
+                    </div>
+                        <div class="card-body m-1">
+                          <h4 class="card-title text-center" style="color: #08A6E1">El Temizliği</h4>
+                          <p class="card-text">Ellerinizi alkol bazlı bir dezenfektan  ile ve iyice temizleyin veya en az 20 saniye boyunca sabun ve su ile yıkayın.</p>
+                        </div>
+                      </div>
+                    </div>
+            <div class="col-md-4 col-12">
+                <div class="card" style="width:100%; margin-bottom: 20px;border:none;">
+                <div style="background-color: #F2F2FE;padding:20px;">
+                    <img class="card-img-top img-circle" src= "{% static "img/coronavirus.png" %}" alt="Card image" style="width:100% ;display:block; border-radius: 50%;background-color: #F2F2FE;border:none;">
+                </div>
+                    <div class="card-body m-1">
+                      <h4 class="card-title text-center" style="color: #08A6E1">Sosyal Mesafe</h4>
+                      <p class="card-text">Kendinizi ve öksürük veya hapşırmaya karşı herkes arasında en az 1 metre (3 feet) mesafe koruyun.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card" style="width:100%;border:none;">
+                    <div style="background-color: #F2F2FE;padding:20px;">
+                        <img class="card-img-top img-circle" src="{% static "img/old-man.png" %}" alt="Card image" style="width:100% ;display:block; border-radius: 50%;background-color: #F2F2FE;border:none;">
+                    </div>
+                        <div class="card-body m-1">
+                          <h4 class="card-title text-center" style="color: #08A6E1">Maske Kullanımı</h4>
+                          <p class="card-text">Hasta olan ve hasta olma ihtimali insanlardan etkili olduğu düşünülen yöntemdir.Kaliteli maske kullanımlmalıdır.</p>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-2"><img src="{% static "img/home.png" %}" width="100%" style="margin-top: 200px;"></div>
+        </div>
+    </section>
+    <session>
+
+                  <footer style="background-image : url({% static "img/shape-a.png" %}">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h3>Site Haritası</h3>
+                      <ul class="list-unstyled three-column">
+                        <li><a href="http://127.0.0.1:8000/">Anasayfa</a></li>
+                        <li><a href="{% url 'haberler' %}">Haberler</a></li>
+                        <li><a href="{% url 'veriler' %}">Canlı Veriler</a></li>
+                        <li><a href="{% url 'neleryapmaliyiz' %}">Neler Yapmalıyız</a></li>
+                        <li><a href="{% url 'sss' %}">S.S.S</a></li>
+                        <li><a href="{% url 'hakkinda' %}">Covid-19 Hakkında</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <h3>Detaylı bilgi Kaynakları</h3>
+                        <ul class="list-unstyled three-column">
+                            <li><pre><img src="{% static "img/covi19.png" %}" width="150px" height="48px" padding-left="100px"> <a href="https://covid19.saglik.gov.tr/">Sağlık Bakanlığı</a></li>
+                            <li><img src="{% static "img/World_Health_Organization_logo_logotype.png" %}" width="150px" height="48px"> <a href="https://www.who.int/">Dünya Sağlık Örgütü</a></li>
+                          </ul>
+                      </div>
+
+                    </div>
+                </div>
+                <div class="copyright text-center">
+                  Copyright &copy; 2020 <span>Uğur Bayram</span>
+                </div>
+              </div>
+                </div>
+              </footer>
+
+    </session>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="neleryap.js" type="text/javascript"></script>
+</body>
+
+</html>
+   

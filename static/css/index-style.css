@@ -1,0 +1,113 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav {
+    background-color: #F7F9FE;
+}
+nav ul li {
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 22px;
+}
+nav ul li a:hover{
+    text-decoration: none;
+    font-size: 22px;
+    color :#50658E ;
+}
+.haber {
+    font-size: 34px;
+    font-family: 'Balsamiq Sans';
+    color : yellow ;
+    position: relative;
+    display:inline-block;
+    padding : 400;
+    box-shadow: inset 1px -84px 13px -4px rgba(13,12,13,0.3);
+}
+#butunHaberler {
+    text-decoration: none;
+    color : #2A81EA;
+    background-color :#F7F9FE;
+    border: 2px solid #2A81EA;
+    border-radius: 5px;
+}
+.carousel-item{
+  border : 5px solid #FE6775;
+  border-radius: 5px;
+ 
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #haberimg{
+     height: 400px;
+    }
+   .carousel-caption{
+       height: 50%;
+       padding-bottom:100px;
+   }
+}
+
+.item{
+  -webkit-box-shadow: 6px 10px 76px 5px ;
+  -moz-box-shadow: 6px 10px 76px 5px rgb(117, 176, 232);
+  box-shadow: 6px 10px 76px 5px rgb(117, 176, 232);
+}
+.hrstyle{
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+  footer {
+    background:#151C2E;
+    color: #aaa;
+    
+  }
+  
+  footer a {
+    font-family: 'Trebuchet MS';
+    font-size : 18px;
+    color: #aaa;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    font-family: 'Trebuchet MS';
+    
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer h3 {
+   color: #0894d1;
+    letter-spacing: 1px;
+    margin: 10px 0 10px;
+  }
+  
+  footer .three-column {
+   overflow: hidden;
+  }
+  
+  footer .three-column li{
+    
+    padding: 5px 0;
+  }
+
+  
+  footer .copyright {
+    padding: 15px 0;
+    background: #151C2E;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  
+  footer .copyright span {
+    color: #0894d1;
+  }

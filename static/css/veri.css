@@ -1,0 +1,95 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav {
+    background-color: #F7F9FE;
+}
+nav ul li {
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 22px;
+}
+nav ul li a:hover{
+    text-decoration: none;
+    font-size: 22px;
+    color :#50658E ;
+}
+.hrstyle{
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #content{
+        width: 100%;
+        height: auto;
+    }
+    #content2{
+        width: 100%;
+        height:"1000px";
+    }
+  }
+  footer {
+    background:#151C2E;
+    background-image: url(img/shape-a.png);
+    color: #aaa;
+    
+  }
+  
+  footer a {
+    font-family: 'Trebuchet MS';
+    font-size : 18px;
+    color: #aaa;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    font-family: 'Trebuchet MS';
+    
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer h3 {
+   color: #0894d1;
+    letter-spacing: 1px;
+    margin: 10px 0 10px;
+      padding-top: 20px;
+  }
+  
+  footer .three-column {
+   overflow: hidden;
+  }
+  
+  footer .three-column li{
+    
+    padding: 5px 0;
+  }
+
+  
+  footer .copyright {
+    padding: 15px 0;
+    background: #151C2E;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  
+  footer .copyright span {
+    color: #0894d1;
+  }
+  table,thead, th, td {
+    border: 1px solid black;
+}
+th {
+    cursor: pointer;
+}

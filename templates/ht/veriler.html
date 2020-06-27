@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/veri.css"%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Veriler</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    </head>
+<body>
+    <div class="container-fluid" style="background-image: url( {% static "img/shape-a.png)" %}; )">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-inverse">
+                <a class="navbar-brand" href="http://127.0.0.1:8000/" style="background-color: #F7F9FE;">
+                    <img src="{% static "/img/output-onlinepngtools.png "%}" alt="Logo"
+                        style="width: 200px ; height: 10rem; background-color: #F7F9FE;padding-top:20px" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fas fa-bars" style="background-color:#F7F9FE ; z-index: 1; color:blue"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'haberler' %}">
+                                <i class="far fa-newspaper"></i> Haberler
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'veriler' %}">
+                                <i class="fab fa-creative-commons-sampling-plus"></i> Canlı veriler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'neleryapmaliyiz' %}">
+                                <i class="fas fa-user-md"></i> Neler Yapmalıyız</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'sss' %}">
+                            <i class="fas fa-question"></i> S.S.S</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'hakkinda' %}">
+                                <i class="fas fa-hospital-symbol"></i> Covid-19 Hakkında</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+            <hr class="hrstyle">
+    <section>
+        <div class="row" >
+            <div class="col-md-6 col-12">
+                <div id ="content" class="table-responsive" style="position: relative; width:100%; height: 100%;"> 
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div id="content2" style="position: relative; width:100%; height: 100%;"> 
+                    <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section style="margin-top:80px;margin-bottom:60px;">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="veri-card" style="border: 1px solid #151C2E;border-radius:20px">
+                        <div style="padding-top: 40px;padding-left: 20px; margin-bottom:-10px">
+                        <img src="{% static "img/iconfinder_263_Ensign_Flag_Nation_turkey_2634440.png" %}" alt="turkish"  style="display:inline-block; padding-left:30px; padding-bottom: 60px;">
+                         <div class="datas" id="datas1" style="display:inline-block;">                     
+                         </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="veri-card" style="border: 1px solid #151C2E;border-radius:20px">
+                        <div style="padding-top: 40px;padding-left: 20px; margin-bottom:-10px">
+                        <img src="{% static "img/EU-European-Union-Flag-icon.png" %}" alt="turkish"  style="display:inline-block; padding-left:30px; padding-bottom: 60px;">
+                         <div class="datas1" style="display:inline-block;">
+                         </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section style="margin-top:60px">
+        <div class="row" >
+            <div class="col-md-6 col-12">
+                <div class="tables text-center" id="tables" style="display:flex; text-align:center; margin-top:80px;margin-left:30px">
+                             
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div id="content2" style="position: relative; width:100%; height: 100%;"> 
+                    <canvas id="yas"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        <section style="margin-top:60px;margin-bottom: 50px;">
+            <div class="row" style="padding-top: 30px">
+                <div class="d-flex col-12" style="align-items: center; justify-content:center"> 
+                    <div class="corona__live-map" style="width: 80%; height: 100%;">
+                        <iframe src="https://virusmapcorona.com/" class="responsive" style="width: 100%; height: 250px" 
+                            title="Corona Virüsü Haberleri - Türkiye ve Dünya Vaka Sayıları (CANLI HARİTA)">
+                        </iframe>
+                    </div>
+                </div>
+                </div>
+            </section>
+        
+        <session>
+                <footer style="background-image : url({% static "img/shape-a.png" %}">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h3>Site Haritası</h3>
+                      <ul class="list-unstyled three-column">
+                        <li><a href="http://127.0.0.1:8000/">Anasayfa</a></li>
+                        <li><a href="{% url 'haberler' %}">Haberler</a></li>
+                        <li><a href="{% url 'veriler' %}">Canlı Veriler</a></li>
+                        <li><a href="{% url 'neleryapmaliyiz' %}">Neler Yapmalıyız</a></li>
+                        <li><a href="{% url 'sss' %}">S.S.S</a></li>
+                        <li><a href="{% url 'hakkinda' %}">Covid-19 Hakkında</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <h3>Detaylı bilgi Kaynakları</h3>
+                        <ul class="list-unstyled three-column">
+                            <li><pre><img src="{% static "img/covi19.png" %}" width="150px" height="48px" padding-left="100px"> <a href="https://covid19.saglik.gov.tr/">Sağlık Bakanlığı</a></li>
+                            <li><img src="{% static "img/World_Health_Organization_logo_logotype.png" %}" width="150px" height="48px"> <a href="https://www.who.int/">Dünya Sağlık Örgütü</a></li>
+                          </ul>
+                      </div>
+
+                    </div>
+                </div>
+                <div class="copyright text-center">
+                  Copyright &copy; 2020 <span>Uğur Bayram</span>
+                </div>
+              </div>
+                </div>
+              </footer>
+
+        </session>
+    </div>
+    <script src="{% static "js/veriler.js" %}" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
+</body>
+</html>

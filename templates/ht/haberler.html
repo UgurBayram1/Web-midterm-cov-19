@@ -1,0 +1,254 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haberler</title>
+    <link rel="stylesheet" href="{% static "css/haberler.css"%}">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+
+<body>
+
+  
+        <div class="container-fluid" style="background-color: #F7F9FE;">
+       <header>
+            <nav class="navbar navbar-expand-lg navbar-inverse">
+                <a class="navbar-brand" href="http://127.0.0.1:8000/" style="background-color: #F7F9FE;">
+                    <img src="{% static "/img/output-onlinepngtools.png "%}" alt="Logo"
+                        style="width: 200px ; height: 10rem; background-color: #F7F9FE;padding-top:20px" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fas fa-bars" style="background-color:#F7F9FE ; z-index: 1; color:blue"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'haberler' %}">
+                                <i class="far fa-newspaper"></i> Haberler
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'veriler' %}">
+                                <i class="fab fa-creative-commons-sampling-plus"></i> Canlı veriler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'neleryapmaliyiz' %}">
+                                <i class="fas fa-user-md"></i> Neler Yapmalıyız</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'sss' %}">
+                            <i class="fas fa-question"></i> S.S.S</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'hakkinda' %}">
+                                <i class="fas fa-hospital-symbol"></i> Covid-19 Hakkında</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <hr class="hrstyle">
+        <section style="background-image: url({% static "img/shape-a.png)"%});margin-top: 20px; margin-bottom: 10px">
+            <div class="row" style=" margin-bottom: 30px">
+                <div class="col-1 col-sm-1"></div>
+                <div id="demo" class="carousel slide col-10 item nopadding p-0 deneme" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                    <div class="carousel-inner" >
+                        <div class="carousel-item active">
+                            <a href="{% url "haber1" %}">
+                                <img src="  https://img.fanatik.com.tr/img/78/740x418/5eb65519ae298bfa1ba94148.jpg"
+                                id="haberimg"   width="100%" height="600px">
+                                <div class="carousel-caption">
+                                    <p class="haber">Yasağın ilk gününde yollar boş kaldı</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img id="haberimg" src="https://cdn1.ntv.com.tr/gorsel/xR0Uom0zQE2zAuk6XapBYQ.jpg?width=660&mode=both&scale=both"
+                                    width="100%" height="600px">
+                                <div class="carousel-caption">
+                                    <p class="haber">Van'da karantinaya alınan mahallede Covid-19 vaka sayısı 84'e
+                                        yükseldi</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="https://cdn1.ntv.com.tr/gorsel/J5LgVlPZ80S2sHxPsL4VNA.jpg?width=660&mode=both&scale=both"
+                                id="haberimg"  width="100%" height="600px">
+                                <div class="carousel-caption">
+                                    <p class="haber">Verem aşısı corona virüse karşı korur mu?</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                    <div class="col-md-4 col-12">
+                        <div class="card">
+                            <div class="image">
+                              <img src="https://i2.milimaj.com/i/milliyet/75/0x410/5eb90efa55427e1f0c5d4db5.jpg" />
+                            </div>
+                            <div class="card-inner">
+                              <div class="header">
+                                <h2>Restoran ve otellerin açılış tarihi belli oldu</h2>
+                            </div>
+                            
+                              </div>
+                          </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="card">
+                            <div class="image">
+                              <img src=" https://i.sozcu.com.tr/wp-content/uploads/2020/05/10/iecrop/dha-karabuk-1_16_9_1589125812.jpg" />
+                            </div>
+                            <div class="card-inner">
+                              <div class="header">
+                                <h2>Vali açıkladı: 5 gündür corona virüsü vakası görülmedi!</h2>
+                            </div>
+                              </div>
+                          </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <div class="card">
+                            <div class="image">
+                              <img src="https://img.fanatik.com.tr/img/78/740x418/5eb95dcc66a97c98be5466a1.jpg" />
+                            </div>
+                            <div class="card-inner">
+                              <div class="header">
+                                <h2>İstanbul'da trafik yoğunluğu eski günleri hiç aratmadı</h2>
+                            </div>
+                              </div>
+                          </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <div class="card">
+                        <div class="image">
+                          <img src="https://i2.milimaj.com/i/milliyet/75/0x410/5eb90efa55427e1f0c5d4db5.jpg" />
+                        </div>
+                        <div class="card-inner">
+                          <div class="header">
+                            <h2>Restoran ve otellerin açılış tarihi belli oldu</h2>
+                        </div>
+                        
+                          </div>
+                      </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card">
+                        <div class="image">
+                          <img src="https://img.fanatik.com.tr/img/78/740x418/5eb65519ae298bfa1ba94148.jpg" />
+                        </div>
+                        <div class="card-inner">
+                          <div class="header">
+                            <h2>Yasağın ilk gününde yollar boş kaldı</h2>
+                        </div>
+                          </div>
+                      </div>
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="card">
+                        <div class="image">
+                          <img src="https://img.fanatik.com.tr/img/78/740x418/5eb95dcc66a97c98be5466a1.jpg" />
+                        </div>
+                        <div class="card-inner">
+                          <div class="header">
+                            <h2>İstanbul'da trafik yoğunluğu eski günleri hiç aratmadı</h2>
+                        </div>
+                          </div>
+                      </div>
+                </div>
+        </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="veri-card">
+                        <img src="{% static "img/iconfinder_263_Ensign_Flag_Nation_turkey_2634440.png" %}"alt="turkish"  style="display:inline-block; padding-left:30px; padding-bottom: 60px;">
+                         <div class="datas" id="datas1" style="display:inline-block;">
+                             
+                         </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="veri-card">
+                        <img src="{% static "img/EU-European-Union-Flag-icon.png" %}" alt="turkish"  style="display:inline-block; padding-left:30px; padding-bottom: 60px;">
+                         <div class="datas1" style="display:inline-block;">
+                            
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <session>
+            <footer style="background-image : url({% static "img/shape-a.png" %}">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h3>Site Haritası</h3>
+                      <ul class="list-unstyled three-column">
+                        <li><a href="http://127.0.0.1:8000/">Anasayfa</a></li>
+                        <li><a href="{% url 'haberler' %}">Haberler</a></li>
+                        <li><a href="{% url 'veriler' %}">Canlı Veriler</a></li>
+                        <li><a href="{% url 'neleryapmaliyiz' %}">Neler Yapmalıyız</a></li>
+                        <li><a href="{% url 'sss' %}">S.S.S</a></li>
+                        <li><a href="{% url 'hakkinda' %}">Covid-19 Hakkında</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <h3>Detaylı bilgi Kaynakları</h3>
+                        <ul class="list-unstyled three-column">
+                            <li><pre><img src="{% static "img/covi19.png" %}" width="150px" height="48px" padding-left="100px"> <a href="https://covid19.saglik.gov.tr/">Sağlık Bakanlığı</a></li>
+                            <li><img src="{% static "img/World_Health_Organization_logo_logotype.png" %}" width="150px" height="48px"> <a href="https://www.who.int/">Dünya Sağlık Örgütü</a></li>
+                          </ul>
+                      </div>
+
+                    </div>
+                </div>
+                <div class="copyright text-center">
+                  Copyright &copy; 2020 <span>Uğur Bayram</span>
+                </div>
+              </div>
+                </div>
+              </footer>
+        </session>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="{% static "js/haber.js" %}" type="text/javascript"></script>
+</body>
+
+</html>

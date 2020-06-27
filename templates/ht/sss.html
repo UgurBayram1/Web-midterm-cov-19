@@ -1,0 +1,258 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sıkça Sorulan Sorular</title>
+    <link rel="stylesheet" href="{%static "css/sss.css"%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css2?family=Acme&family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<div>
+    <header>
+            <nav class="navbar navbar-expand-lg navbar-inverse">
+                <a class="navbar-brand" href="http://127.0.0.1:8000/" style="background-color: #F7F9FE;">
+                    <img src="{% static "/img/output-onlinepngtools.png "%}" alt="Logo"
+                        style="width: 200px ; height: 10rem; background-color: #F7F9FE;padding-top:20px" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fas fa-bars" style="background-color:#F7F9FE ; z-index: 1; color:blue"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'haberler' %}">
+                                <i class="far fa-newspaper"></i> Haberler
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'veriler' %}">
+                                <i class="fab fa-creative-commons-sampling-plus"></i> Canlı veriler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'neleryapmaliyiz' %}">
+                                <i class="fas fa-user-md"></i> Neler Yapmalıyız</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'sss' %}">
+                            <i class="fas fa-question"></i> S.S.S</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'hakkinda' %}">
+                                <i class="fas fa-hospital-symbol"></i> Covid-19 Hakkında</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    <div style="margin-top:40px;margin-bottom: 40px; background-image: url({%  static "img/shape-a.png" %});">
+        <div class="row">
+            <div class="col-lg-1 col-md-3 col-1">
+
+            </div>
+            <div class="col-lg-10 col-md-6 col-10">
+                <div class="bs-example">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"><i class="fa fa-plus"></i> Yeni Koronavirüs (COVID-19) nedir?
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>Yeni Koronavirüs (COVID-19), ilk olarak Çin’in Vuhan Eyaleti’nde Aralık ayının sonlarında solunum yolu belirtileri (ateş, öksürük, nefes darlığı) gelişen bir grup hastada yapılan araştırmalar sonucunda 13 Ocak 2020’de tanımlanan bir virüstür. Salgın başlangıçta bu bölgedeki deniz ürünleri ve hayvan pazarında bulunanlarda tespit edilmiştir. Daha sonra insandan insana bulaşarak Vuhan başta olmak üzere Hubei eyaletindeki diğer şehirlere ve Çin Halk Cumhuriyeti’nin diğer eyaletlerine ve diğer dünya ülkelerine yayılmıştır.
+Coronavirüsler, hayvanlarda veya insanlarda hastalığa neden olabilecek büyük bir virüs ailesidir. İnsanlarda, birkaç koronavirüsün soğuk algınlığından Orta Doğu Solunum Sendromu (MERS) ve Şiddetli Akut Solunum Sendromu (SARS) gibi daha şiddetli hastalıklara kadar solunum yolu enfeksiyonlarına neden olduğu bilinmektedir. Koronavirüs hastalığına COVID-19 neden olur.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading2">
+                        <h2 class="mb-0">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2"><i class="fa fa-plus"></i> Yeni Koronavirüsün (COVID-19) nasıl bulaşır?</button>
+                        </h2>
+                    </div>
+                    <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>Hasta bireylerin öksürmeleri aksırmaları ile ortama saçılan damlacıkların solunması ile bulaşır. Hastaların solunum parçacıkları ile kirlenmiş yüzeylere dokunulduktan sonra ellerin yıkanmadan yüz, göz, burun veya ağıza götürülmesi ile de virüs alınabilir. Kirli ellerle göz, burun veya ağıza temas etmek risklidir.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading3">
+                        <h2 class="mb-0">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3"><i class="fa fa-plus"></i> Yeni Koronavirüs Enfeksiyonu tanısı nasıl konur?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>Yeni Koronavirüs tanısı için gerekli moleküler testler ülkemizde mevcuttur. Tanı testi sadece Halk Sağlığı Genel Müdürlüğü Ulusal Viroloji Referans Laboratuvarında ve belirlenmiş Halk Sağlığı Laboratuvarlarında yapılmaktadır.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading4">
+                        <h2 class="mb-0">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4"><i class="fa fa-plus"></i> Yeni Koronavirüs (COVID-19) enfeksiyonunu önlemek veya tedavi etmek için kullanılabilecek virüse etkili bir ilaç var mıdır?</button>
+                        </h2>
+                    </div>
+                    <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>Hastalığın virüse etkili bir tedavisi yoktur. Hastanın genel durumuna göre gerekli destek tedavisi uygulanmaktadır. Bazı ilaçların virüs üzerindeki etkinliği araştırılmaktadır. Ancak şu an için virüse etkili bir ilaç yoktur.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading5">
+                        <h2 class="mb-0">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5"><i class="fa fa-plus"></i> Antibiyotikler Yeni Koronavirüs (COVID-19)enfeksiyonunu önleyebilir mi veya tedavi edebilir mi?</button>
+                        </h2>
+                    </div>
+                    <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>Hayır, antibiyotikler virüslere etki etmez, sadece bakterilere karşı etkilidir. Yeni Koronavirüs (2019-nCoV) bir virüstür ve bu nedenle enfeksiyonu önlemek veya tedavi etmek amacıyla antibiyotikler kullanılmamalıdır.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading6">
+                        <h2 class="mb-0">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6"><i class="fa fa-plus"></i> Yeni Koronavirüsün (COVID-19) kuluçka (inkübasyon) süresi ne kadardır?</button>
+                        </h2>
+                    </div>
+                    <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p> Virüsün kuluçka süresi 2 gün ile 14 gün arasındadır.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading7">
+                        <h2 class="mb-0">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse7"><i class="fa fa-plus"></i> Yeni Koronavirüsün (COVID-19) neden olduğu belirtiler ve oluşturduğu hastalıklar nelerdir?</button>
+                        </h2>
+                    </div>
+                    <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>Belirtisiz olgular olabileceği bildirilmekle birlikte, bunların oranı bilinmemektedir. En çok karşılaşılan belirtiler ateş, öksürük ve nefes darlığıdır. Şiddetli olgularda zatürre, ağır solunum yetmezliği, böbrek yetmezliği ve ölüm gelişebilmektedir.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading8">
+                        <h2 class="mb-0">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse8"><i class="fa fa-plus"></i> Yeni Koronavirüs (COVID-19) kimleri daha fazla etkiler?</button>
+                        </h2>
+                    </div>
+                    <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>Elde edilen veriler doğrultusunda ileri yaş ve eşlik eden hastalığı (astım, diyabet, kalp hastalığı gibi) olanlarda virüsün ağır hastalık oluşturma riski daha yüksektir. Bugünkü verilerle hastalığın %10-15 olguda ağır seyrettiği, yaklaşık %2 olguda da ölümle sonuçlandığı bilinmektedir.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading9">
+                        <h2 class="mb-0">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse9"><i class="fa fa-plus"></i> Yeni Koronavirüs (COVID-19)hastalığı ani ölümlere neden olur mu?</button>
+                        </h2>
+                    </div>
+                    <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>Hastalanan kişilerle ilgili yayımlanmış verilere göre hastalık nispeten yavaş bir seyir göstermektedir. İlk birkaç gün daha hafif şikayetler (ateş, boğaz ağrısı, halsizlik gibi) görülmekte sonrasında öksürük, nefes darlığı gibi belirtiler eklenmektedir. Hastalar genellikle 7 günden sonra hastaneye başvuracak kadar ağırlaşmaktadır. Dolayısı ile sosyal medyada yer alan, birden bire yere düşüp hastalanan veya ölen hastalarla ilgili videolar gerçeği yansıtmamaktadır.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading10">
+                        <h2 class="mb-0">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse10"><i class="fa fa-plus"></i> Türkiye’den bildirilen enfekte Yeni Koronavirüs (COVID-19) vakası mevcut mudur?</button>
+                        </h2>
+                    </div>
+                    <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>Ülkemizde Yeni Koronavirüs (COVID-19) hastalığı 10 Mart 2020 tarihinde ilk pozitif vaka saptanmıştır. Vaka sayıları ile ilgili günlük olarak bilgilendirmeler Bakanlığımız aracılığı ile yapılacaktır.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading11">
+                        <h2 class="mb-0">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse11"><i class="fa fa-plus"></i> Çin Halk Cumhuriyeti (ÇHC) dışında hangi ülkeler hastalık için risk taşıyor?</button>
+                        </h2>
+                    </div>
+                    <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>Hastalık Çin Halk Cumhuriyet’inde ortaya çıkmış ve birçok ülkeye yayılmıştır. Tüm dünyada hastalık görülmektedir. Dünya Sağlık Örgütü tarafından pandemi olarak kabul edilmiştir.
+                                Sağlık Bakanlığı Bilimsel Danışma Kurulu vaka görülen ülkelere “mecbur kalınmadıkça gidilmemesi” uyarısında bulunmaktadır. Seyahat edeceklerin ulusal ve uluslararası otoritelerin uyarılarını takip etmeleri gerekir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-1 col-md-3 col-10">
+
+            </div>
+        </div>
+    </div>
+</div>
+       <footer style="background-image : url({% static "img/shape-a.png" %}">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h3>Site Haritası</h3>
+                      <ul class="list-unstyled three-column">
+                        <li><a href="http://127.0.0.1:8000/">Anasayfa</a></li>
+                        <li><a href="{% url 'haberler' %}">Haberler</a></li>
+                        <li><a href="{% url 'veriler' %}">Canlı Veriler</a></li>
+                        <li><a href="{% url 'neleryapmaliyiz' %}">Neler Yapmalıyız</a></li>
+                        <li><a href="{% url 'sss' %}">S.S.S</a></li>
+                        <li><a href="{% url 'hakkinda' %}">Covid-19 Hakkında</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <h3>Detaylı bilgi Kaynakları</h3>
+                        <ul class="list-unstyled three-column">
+                            <li><pre><img src="{% static "img/covi19.png" %}" width="150px" height="48px" padding-left="100px"> <a href="https://covid19.saglik.gov.tr/">Sağlık Bakanlığı</a></li>
+                            <li><img src="{% static "img/World_Health_Organization_logo_logotype.png" %}" width="150px" height="48px"> <a href="https://www.who.int/">Dünya Sağlık Örgütü</a></li>
+                          </ul>
+                      </div>
+
+                    </div>
+                </div>
+                <div class="copyright text-center">
+                  Copyright &copy; 2020 <span>Uğur Bayram</span>
+                </div>
+              </div>
+                </div>
+              </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="{% static "js/sss.js"%}" type="text/javascript"></script>
+</body>
+
+</html>
+
+
+
